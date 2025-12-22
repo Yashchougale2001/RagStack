@@ -1,9 +1,40 @@
-# Mini RAG Project
+# Mini-RAG: CPU-Friendly Retrieval-Augmented Generation System
 
-A simple Retrieval Augmented Generation (RAG) system using:
-- Sentence Transformers
-- Cosine similarity
-- OpenAI LLM
+A lightweight, modular **Retrieval-Augmented Generation (RAG)** system built for **CPU-only environments**.  
+It uses **ChromaDB** for vector storage, **MiniLM embeddings** for semantic search, and a **local FLAN-T5 model** for answer generation.  
+
+This project demonstrates a **full RAG pipeline** with **modular, maintainable code**, suitable for small to medium text knowledge bases.
+
+---
+
+## 🚀 Features
+
+- **Semantic retrieval** using `all-MiniLM-L6-v2` embeddings
+- **ChromaDB vector database** for scalable, persistent storage
+- **CPU-friendly LLM generation** with `google/flan-t5-small`
+- **Proper chunking with overlap** for improved retrieval quality
+- Modular structure: easy to maintain, extend, or swap components
+- CLI-based interactive Q&A loop
+
+---
+
+## 🗂 Project Structure
+
+mini_rag/
+│
+├── data/
+│ └── knowledge.txt # Knowledge base (text)
+│
+├── src/
+│ ├── init.py
+│ ├── loader.py # Loading + chunking text
+│ ├── vector_store.py # ChromaDB init, add, query
+│ ├── retrieval.py # Retrieval logic (optional thresholds)
+│ ├── generator.py # LLM prompt + answer generation
+│ └── main.py # Main interactive CLI
+│
+├── requirements.txt
+└── README.md
 
 Answers questions strictly from a local text file.
 
