@@ -1,10 +1,9 @@
-# main.py
+# Imports
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
-# ---------------------------
-# 1️⃣ Load and chunk the knowledge
+# 1️ Load and chunk the knowledge
 # ---------------------------
 def load_text(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
@@ -20,16 +19,14 @@ def chunk_text(text, chunk_size=50):
         chunks.append(" ".join(words[i:i+chunk_size]))
     return chunks
 
-# ---------------------------
-# 2️⃣ Initialize lightweight embedding model
+# 2️ Initialize lightweight embedding model
 # ---------------------------
 model = SentenceTransformer("all-MiniLM-L6-v2")  # Small, fast, CPU-friendly
 
 def embed_chunks(chunks):
     return model.encode(chunks)
 
-# ---------------------------
-# 3️⃣ Retrieve relevant chunks
+# 3️ Retrieve relevant chunks
 # ---------------------------
 def retrieve_chunks(query, chunks, embeddings, top_k=1):
     query_embedding = model.encode([query])
@@ -37,8 +34,7 @@ def retrieve_chunks(query, chunks, embeddings, top_k=1):
     top_indices = np.argsort(similarities)[-top_k:][::-1]  # highest first
     return [chunks[i] for i in top_indices]
 
-# ---------------------------
-# 4️⃣ Main loop: Q&A
+# 4️ Main loop: Q&A
 # ---------------------------
 if __name__ == "__main__":
     print("Loading knowledge base...")

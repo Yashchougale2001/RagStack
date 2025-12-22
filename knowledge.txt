@@ -1,11 +1,25 @@
-Artificial Intelligence is the broad field of building intelligent systems.
+Artificial Intelligence (AI) is the branch of computer science focused on creating systems capable of performing tasks that normally require human intelligence, such as reasoning, problem-solving, perception, and decision-making.
 
-Machine Learning is a subset of AI that learns from data.
+Machine Learning (ML) is a subset of AI where systems learn patterns from data without being explicitly programmed. ML algorithms are broadly categorized into supervised learning, unsupervised learning, semi-supervised learning, and reinforcement learning.
 
-Deep Learning uses neural networks with multiple layers.
+Supervised learning uses labeled data to train models for tasks like classification and regression. Classification predicts categories, such as spam detection or fraud detection. Regression predicts continuous values, like house prices or stock trends.
 
-LSTM and GRU are types of recurrent neural networks used for sequence data.
+Unsupervised learning discovers patterns in unlabeled data. Common techniques include clustering (grouping similar data points) and dimensionality reduction (reducing features while retaining information). PCA, t-SNE, and UMAP are popular dimensionality reduction methods.
 
-Transformers use attention mechanisms and power modern LLMs.
+Reinforcement Learning (RL) involves an agent learning to take actions in an environment to maximize cumulative rewards. Key concepts include states, actions, policies, and rewards. RL is used in robotics, game AI, and autonomous systems.
 
-RAG stands for Retrieval Augmented Generation.
+Deep Learning (DL) is a subset of ML that uses neural networks with multiple layers to automatically learn hierarchical features. Artificial Neural Networks (ANNs) form the base of DL, while Convolutional Neural Networks (CNNs) are specialized for images, and Recurrent Neural Networks (RNNs) handle sequential data.
+
+LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit) are types of RNNs that manage long-term dependencies in sequences, useful in time series prediction and natural language processing.
+
+Transformers revolutionized DL by using attention mechanisms to capture relationships across sequences. They power modern Large Language Models (LLMs) capable of text generation, summarization, translation, and code generation.
+
+Large Language Models (LLMs) are trained on massive text datasets to understand and generate human-like language. Tokenization splits text into chunks, embeddings represent semantics, and context windows define the amount of text the model can consider at once. Fine-tuning adapts models to specific tasks.
+
+Generative AI (GenAI) refers to models that create new content, including text, images, audio, and video. Techniques include GANs (Generative Adversarial Networks), diffusion models, and transformer-based LLMs.
+
+Agentic AI describes systems that can act autonomously toward goals, using planning, tool use, memory, and reasoning. They are built on LLMs but extend them with memory, feedback loops, and environment interaction. Examples include AutoGPT and LangChain agents.
+
+Retrieval-Augmented Generation (RAG) combines a knowledge retrieval system with language models to produce grounded answers. Instead of hallucinating, the model retrieves relevant knowledge chunks and generates responses based on them. This approach improves factual accuracy and allows domain-specific question answering.
+
+Embeddings represent text as vectors in high-dimensional space, enabling semantic search. Cosine similarity measures the similarity between embeddings and is widely used in RAG systems. Lightweight embeddings, such as all-MiniLM-L6-v2, are CPU-friendly and suitable for small systems.
