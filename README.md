@@ -68,3 +68,11 @@ Similarity Search (cosine)
 Top-K Relevant Chunks
       ↓
 Displayed Answer (retrieved text)
+
+
+## Architecture Overview
+
+### File-Level Workflow
+This project follows a modular RAG architecture where each component has a single responsibility.
+
+![RAG File Workflow](docs/rag_file_level_workflow.png)
