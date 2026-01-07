@@ -3,3 +3,4 @@ chromadb
 transformers
 torch
 scikit-learn
+pyyaml
