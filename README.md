@@ -1,4 +1,4 @@
-Mini-RAG: CPU-Friendly Retrieval-Augmented Generation System
+RAG_Stack: CPU-Friendly Retrieval-Augmented Generation System
 
 A lightweight, modular Retrieval-Augmented Generation (RAG) system designed specifically for CPU-only environments and low-resource machines.
 
@@ -46,24 +46,31 @@ Interactive CLI-based Q&A loop
 mini_rag/
 │
 ├── data/
-│   └── knowledge.txt          # Text knowledge base
+│   └── knowledge.txt              # Your raw text knowledge base
 │
 ├── src/
 │   ├── loader/
-│   │   └── loader.py          # Text loading & chunking
+│   │   └── loader.py              # load_text() & chunk_text()
 │   │
 │   ├── db/
-│   │   └── vector_store.py    # ChromaDB setup, add, query
+│   │   └── vector_store.py        # create_vector_store(), add_chunks_to_db(), query_chunks()
 │   │
 │   ├── retrieval/
-│   │   └── retriever.py       # Retrieval logic
+│   │   └── retriever.py           # retrieve_chunks() with min_docs & optional similarity filtering
 │   │
 │   ├── generation/
-│   │   └── generator.py       # Prompting & answer generation
+│   │   ├── generator.py           # generate_answer(), trim_context(), model init
+│   │   └── prompt_templates.py    # optional, store complex prompts separately
 │   │
-│   └── main.py                # CLI entry point
+│   ├── eval/
+│   │   └── evaluator.py           # evaluate_answer() with grounding check
+│   │
+│   ├── ingest.py                  # Script to load text, chunk, and add to vector store
+│   └── main.py                    # CLI entry point for QA
 │
-├── chroma_db/                 # Persistent vector store (gitignored)
+├── chroma_db/                     # Persistent vector DB (gitignored)
+│
+├── config.yaml                     # All configurable params (chunk_size, models, etc.)
 ├── requirements.txt
 └── README.md
 
