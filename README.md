@@ -1,76 +1,77 @@
-RAG_Stack: CPU-Friendly Retrieval-Augmented Generation System
+RAG_Stack: CPU-Friendly Local Retrieval-Augmented Generation System
 
-A lightweight, modular Retrieval-Augmented Generation (RAG) system designed specifically for CPU-only environments and low-resource machines.
+A lightweight, modular Retrieval-Augmented Generation (RAG) system designed for CPU-only, low-resource machines, using fully local models with zero paid APIs.
 
-This project demonstrates how to build a complete, local RAG pipeline using:
+This project demonstrates how to build a production-style RAG pipeline that runs entirely on your machine using:
 
 ChromaDB for persistent vector storage
 
-MiniLM embeddings for semantic retrieval
+BGE Small embeddings for accurate semantic retrieval
 
-FLAN-T5 (small) for grounded answer generation
+TinyLlama via Ollama for grounded answer generation
 
-The system answers questions strictly from a local knowledge base, avoiding hallucinations.
+The system answers questions strictly from a local knowledge base, with explicit safeguards against hallucination.
 
 🎯 Why This Project Exists
 
-Most RAG tutorials assume:
-
-Paid APIs
-
-High-end GPUs
-
-Cloud infrastructure
-
 This project proves that:
 
-You can build a real RAG system locally, for free, on a CPU with limited RAM, while still following clean architecture and production-style design.
+RAG is an architecture, not a paid service
+
+You can run a complete RAG pipeline locally, on CPU
+
+Clean design and grounding rules matter more than model size
+
+This is built for learning, interviews, and real-world constraints, not demo fluff.
 
 🚀 Features
 
-Semantic retrieval using all-MiniLM-L6-v2
+Semantic retrieval using BAAI/bge-small-en-v1.5
 
-Persistent ChromaDB vector store (no re-embedding on restart)
+Persistent ChromaDB (no re-embedding on restart)
 
-CPU-friendly text generation using google/flan-t5-small
+Local LLM inference using TinyLlama via Ollama
 
-Overlapping text chunking for better retrieval quality
+Overlapping text chunking for better recall
 
-Strict context-grounded answering (no hallucinations)
+Strict context-grounded answering
 
-Clean, modular, interview-ready codebase
+Explicit “I don’t know” handling (no guessing)
 
-Interactive CLI-based Q&A loop
+Answer faithfulness evaluation
+
+Clean, modular, interview-ready architecture
+
+Interactive CLI-based Q&A
 
 🗂 Project Structure
 mini_rag/
 │
 ├── data/
-│   └── knowledge.txt              # Your raw text knowledge base
+│   └── knowledge.txt              # Raw knowledge base
 │
 ├── src/
 │   ├── loader/
-│   │   └── loader.py              # load_text() & chunk_text()
+│   │   └── loader.py              # Text loading & chunking
 │   │
 │   ├── db/
-│   │   └── vector_store.py        # create_vector_store(), add_chunks_to_db(), query_chunks()
+│   │   └── vector_store.py        # ChromaDB creation & queries
 │   │
 │   ├── retrieval/
-│   │   └── retriever.py           # retrieve_chunks() with min_docs & optional similarity filtering
+│   │   └── retriever.py           # Top-K retrieval logic
 │   │
 │   ├── generation/
-│   │   ├── generator.py           # generate_answer(), trim_context(), model init
-│   │   └── prompt_templates.py    # optional, store complex prompts separately
+│   │   ├── generator.py           # Ollama + TinyLlama inference
+│   │   └── prompt_templates.py    # Strict grounding prompts
 │   │
 │   ├── eval/
-│   │   └── evaluator.py           # evaluate_answer() with grounding check
+│   │   └── evaluator.py           # Faithfulness checks
 │   │
-│   ├── ingest.py                  # Script to load text, chunk, and add to vector store
-│   └── main.py                    # CLI entry point for QA
+│   ├── ingest.py                  # One-time ingestion script
+│   └── main.py                    # CLI entry point
 │
-├── chroma_db/                     # Persistent vector DB (gitignored)
-│
-├── config.yaml                     # All configurable params (chunk_size, models, etc.)
+├── chroma_db/                     # Persistent vector store
+├── config.yaml                    # Models, chunking, retrieval params
 ├── requirements.txt
 └── README.md
 
@@ -80,9 +81,9 @@ Load text from knowledge.txt
 
 Split text into overlapping chunks
 
-Generate embeddings using MiniLM
+Generate embeddings using BGE Small
 
-Store embeddings in ChromaDB
+Store vectors in ChromaDB
 
 Accept user query
 
@@ -90,18 +91,20 @@ Embed query
 
 Retrieve top-K relevant chunks
 
-Generate answer using retrieved context only
+Generate answer using TinyLlama
+
+Validate answer grounding
 
 🧠 Architecture Overview
 knowledge.txt
       ↓
 Text Loader
       ↓
-Chunking (with overlap)
+Chunking (overlap)
       ↓
-Embedding Model (MiniLM)
+Embedding Model (BGE Small)
       ↓
-Vector Store (ChromaDB – persistent)
+ChromaDB (Persistent)
       ↓
 User Query
       ↓
@@ -109,54 +112,86 @@ Query Embedding
       ↓
 Similarity Search
       ↓
-Top-K Relevant Chunks
+Top-K Context Chunks
       ↓
-LLM (FLAN-T5)
+TinyLlama (Ollama)
       ↓
-Final Answer
+Grounded Answer
 
-🧩 Modular Design (File-Level Responsibility)
+🧩 Modular Design (Single Responsibility)
 Module	Responsibility
-loader	Load raw text and split into chunks
-vector_store	Manage vector DB creation, insertion, retrieval
-retriever	Query orchestration & retrieval logic
-generator	Context-grounded answer generation
-main	Application entry point & CLI loop
+loader	Load & chunk raw text
+vector_store	Vector DB creation & storage
+retriever	Query orchestration
+generator	Context-only answer generation
+evaluator	Detect hallucinations
+main	CLI application loop
 
-Each component has a single responsibility, making the system easy to extend or replace.
+Each module is replaceable without breaking the system.
 
-⚙️ Tech Stack
+⚙️ Tech Stack (Actual)
 Component	Technology
-Embeddings	SentenceTransformers (MiniLM)
+Embeddings	BAAI/bge-small-en-v1.5
 Vector DB	ChromaDB
-LLM	google/flan-t5-small
+LLM	TinyLlama (via Ollama)
 Language	Python
 Hardware	CPU-only
-🧪 Limitations
 
-Designed for small to medium text corpora
+No cloud. No paid APIs. Fully local.
 
-FLAN-T5-small has limited reasoning depth
+🧪 Limitations (Honest)
 
-No conversation memory (single-turn Q&A)
+Designed for small–medium corpora
 
-No re-ranking or hybrid search (yet)
+TinyLlama has limited reasoning depth
 
-🔮 Future Improvements
+Single-turn Q&A (no memory)
 
-Conversation memory
+No reranking or hybrid retrieval
 
-Similarity thresholding
+Basic similarity filtering
 
-Re-ranking (cross-encoder)
+These are engineering tradeoffs, not bugs.
 
-Hybrid retrieval (BM25 + embeddings)
+▶️ How to Run
+Prerequisites
 
-Evaluation metrics for retrieval quality
+Python 3.9+
 
-Web UI / API layer
+Ollama installed
 
-📌 Key Takeaway
+TinyLlama model pulled
 
-This project demonstrates that RAG is an architecture, not a paid API feature.
-It focuses on clarity, correctness, and constraints, making it ideal for learning, interviews, and small-scale applications.
+ollama pull tinyllama
+
+Setup
+git clone https://github.com/<your-username>/mini_rag.git
+cd mini_rag
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+Add Knowledge
+
+Put your data in:
+
+data/knowledge.txt
+
+Ingest Data (One-Time)
+python src/ingest.py
+
+Start Q&A
+python src/main.py
+
+
+Ask questions related to knowledge.txt.
+If the answer is not present, the system responds:
+
+I don't know
+
+Update Knowledge
+
+If knowledge.txt changes:
+
+rm -rf chroma_db
+python src/ingest.py
