@@ -1,0 +1,11 @@
+EmployeeID,Name,Department,Role,JoiningDate,Salary,PerformanceScore,Location
+E001,John Doe,Engineering,Software Engineer,2021-05-10,75000,8,New York
+E002,Jane Smith,Marketing,Marketing Manager,2019-08-15,85000,7,Los Angeles
+E003,Robert Brown,Sales,Sales Executive,2020-03-20,60000,6,Chicago
+E004,Emily Davis,HR,HR Specialist,2022-01-05,65000,9,San Francisco
+E005,Michael Wilson,Engineering,DevOps Engineer,2018-11-12,90000,8,Boston
+E006,Sarah Johnson,Finance,Financial Analyst,2021-07-23,70000,7,Seattle
+E007,David Lee,Engineering,Software Engineer,2020-10-30,78000,6,New York
+E008,Linda Taylor,Sales,Sales Manager,2019-06-18,88000,8,Chicago
+E009,James Anderson,HR,Recruiter,2022-03-11,62000,7,San Francisco
+E010,Patricia Martinez,Marketing,Content Strategist,2021-09-27,72000,9,Los Angeles
