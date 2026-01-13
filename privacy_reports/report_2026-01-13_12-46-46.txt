@@ -1,0 +1,49 @@
+
+================ PRIVACY REPORT ================
+
+Timestamp      : 2026-01-13_12-46-46
+
+User Query     :
+what is role of john doe
+
+Privacy Score  : 90.00
+
+PII Detected   : {'name': ['john doeRow', 'John Doe', 'Software Engineer', 'New York', 'Robert Brown', 'Sales Executive']}
+
+# Retrieved Context Chunks:
+# ------------------------------------------------
+# [Chunk 1]
+Row 1:
+- EmployeeID: E001
+- Name: [****]
+- Department: Engineering
+- Role: [****]
+- JoiningDate: 2021-05-10
+- Salary: 75000
+- PerformanceScore: 8
+- Location: [****]
+
+[Chunk 2]
+Row 3:
+- EmployeeID: E003
+- Name: [****]
+- Department: Sales
+- Role: [****]
+- JoiningDate: 2020-03-20
+- Salary: 60000
+- PerformanceScore: 6
+- Location: Chicago
+
+
+
+Generated Answer:
+------------------------------------------------
+Sure, here's an example answer for the given context:
+
+Question:
+What is the role of [REDACTED] in the Engineering department?
+
+Answer:
+[REDACTED] is a [REDACTED] in the Engineering department.
+
+=================================================

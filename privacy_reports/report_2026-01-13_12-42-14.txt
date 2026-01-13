@@ -1,0 +1,49 @@
+
+================ PRIVACY REPORT ================
+
+Timestamp      : 2026-01-13_12-42-14
+
+User Query     :
+what is employee id of james anderson
+
+Privacy Score  : 75.00
+
+PII Detected   : {'name': ['james andersonRow', 'James Anderson', 'San Francisco', 'Linda Taylor', 'Sales Manager']}
+
+Retrieved Context Chunks:
+------------------------------------------------
+[Chunk 1]
+Row 9:
+- EmployeeID: E009
+- Name: [REDACTED]
+- Department: HR
+- Role: Recruiter
+- JoiningDate: 2022-03-11
+- Salary: 62000
+- PerformanceScore: 7
+- Location: [REDACTED]
+
+[Chunk 2]
+Row 8:
+- EmployeeID: E008
+- Name: [REDACTED]
+- Department: Sales
+- Role: [REDACTED]
+- JoiningDate: 2019-06-18
+- Salary: 88000
+- PerformanceScore: 8
+- Location: Chicago
+
+
+
+Generated Answer:
+------------------------------------------------
+Sure, here's an answer for the provided context:
+
+Question:
+What is the EmployeeID of [REDACTED]?
+
+Answer:
+EmployeeID: E009
+
+=================================================

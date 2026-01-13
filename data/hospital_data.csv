@@ -1,0 +1,11 @@
+PatientID,Name,Age,Gender,Diagnosis,AdmissionDate,DischargeDate,Doctor,Department,BillAmount
+P001,John Doe,45,M,Hypertension,2025-01-10,2025-01-15,Dr. Sharma,Cardiology,45000
+P002,Alice Brown,32,F,Migraine,2025-01-12,2025-01-13,Dr. Kulkarni,Neurology,12000
+P003,Michael Smith,60,M,Diabetes Type II,2025-01-05,2025-01-11,Dr. Verma,Endocrinology,38000
+P004,Sarah Miller,28,F,Fracture - Left Arm,2025-01-08,2025-01-14,Dr. Iyer,Orthopedics,52000
+P005,Raj Patel,50,M,Asthma Attack,2025-01-02,2025-01-04,Dr. Nair,Pulmonology,18000
+P006,Leena Desai,40,F,Thyroid Disorder,2025-01-15,2025-01-18,Dr. Banerjee,Endocrinology,26000
+P007,Chris Evans,70,M,Pneumonia,2025-01-03,2025-01-12,Dr. Rao,Pulmonology,67000
+P008,Priya Singh,25,F,Appendicitis,2025-01-16,2025-01-20,Dr. Shah,General Surgery,55000
+P009,David Wilson,55,M,Kidney Stone,2025-01-09,2025-01-12,Dr. Jain,Urology,43000
+P010,Emma Thomas,38,F,Anemia,2025-01-06,2025-01-08,Dr. Mehra,Hematology,15000

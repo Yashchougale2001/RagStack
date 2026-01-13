@@ -1,0 +1,21 @@
+
+================ PRIVACY REPORT ================
+
+Timestamp      : 2026-01-13_14-25-27
+
+User Query     :
+what is Diagnosis_Code of laura
+
+Privacy Score  : 100.00
+
+PII Detected   : {'name': ['Mockup Mews', 'Placeholder Place'], 'patient_id': ['P008', 'P004'], 'first_name': ['Laura', 'Garcia', 'Gender', 'Address', 'Mockup', 'Mews', 'City', 'Austin', 'State', 'Zip', 'Row', 'Mary', 'Williams', 'Gender', 'Address', 'Placeholder', 'Place', 'City', 'Anywhere', 'State', 'Zip'], 'last_name': ['Laura', 'Garcia', 'Gender', 'Address', 'Mockup', 'Mews', 'City', 'Austin', 'State', 'Zip', 'Row', 'Mary', 'Williams', 'Gender', 'Address', 'Placeholder', 'Place', 'City', 'Anywhere', 'State', 'Zip'], 'date_of_birth': ['2001-12-25', '1995-11-11'], 'gender': ['F', 'F'], 'city': ['FirstName', 'Laura', 'LastName', 'Garcia', 'DateOfBirth', 'Gender', 'Address', 'Mockup Mews', 'City', 'Austin', 'State', 'TX', 'Zip', 'Row ', 'FirstName', 'Mary', 'LastName', 'Williams', 'DateOfBirth', 'Gender', 'Address', 'Placeholder Place', 'City', 'Anywhere', 'State', 'FL', 'Zip'], 'state': ['TX', 'FL'], 'zip': ['770001', '330101'], 'diagnosis_code': ['F32.9', 'Z00.00']}
+
+
+
+Generated Answer:
+------------------------------------------------
+Sure, here's an example answer for the question "What is Diagnosis_Code of [*****]?" based on the provided context:
+
+Diagnosis_Code is a code assigned by a medical professional to identify the diagnosis or condition of a patient. In this case, [*****]'s Diagnosis_Code is [*****], which means she has not been diagnosed with any specific disease or condition.
+
+=================================================

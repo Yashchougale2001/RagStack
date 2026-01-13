@@ -1,0 +1,45 @@
+
+================ PRIVACY REPORT ================
+
+Timestamp      : 2026-01-13_12-45-42
+
+User Query     :
+what is name of empid E008
+
+Privacy Score  : 60.00
+
+PII Detected   : {'name': ['Michael Wilson', 'DevOps Engineer', 'Linda Taylor', 'Sales Manager']}
+
+# Retrieved Context Chunks:
+# ------------------------------------------------
+# [Chunk 1]
+Row 5:
+- EmployeeID: E005
+- Name: [****]
+- Department: Engineering
+- Role: [****]
+- JoiningDate: 2018-11-12
+- Salary: 90000
+- PerformanceScore: 8
+- Location: Boston
+
+[Chunk 2]
+Row 8:
+- EmployeeID: E008
+- Name: [****]
+- Department: Sales
+- Role: [****]
+- JoiningDate: 2019-06-18
+- Salary: 88000
+- PerformanceScore: 8
+- Location: Chicago
+
+
+
+Generated Answer:
+------------------------------------------------
+Sure, here's an answer for the question you provided:
+
+The employee ID in Row 8 is E008.
+
+=================================================

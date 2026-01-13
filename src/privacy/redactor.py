@@ -1,5 +1,5 @@
 class Redactor:
-    def __init__(self, placeholder="[REDACTED]"):
+    def __init__(self, placeholder="[****]"):
         self.placeholder = placeholder
 
     def redact(self, text, pii_dict):

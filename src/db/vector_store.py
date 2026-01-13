@@ -31,10 +31,30 @@ def add_chunks_to_db(collection, chunks, source="csv", domain="hr"):
     count = collection.count()
     print(f"✅ Stored {count} chunks in ChromaDB with source='{source}' and domain='{domain}'.")
 
+# def query_chunks(collection, query, top_k=3):
+#     results = collection.query(
+#         query_texts=[query],
+#         n_results=top_k
+#     )
+
+#     return results["documents"][0]
 def query_chunks(collection, query, top_k=3):
     results = collection.query(
         query_texts=[query],
         n_results=top_k
     )
 
-    return results["documents"][0]
+    raw_docs = results.get("documents", [[]])[0]
+
+    # Force convert anything to plain text ONLY
+    cleaned_docs = []
+    for d in raw_docs:
+        if isinstance(d, str):
+            cleaned_docs.append(d)
+        elif isinstance(d, dict):
+            # Handle broken ingestion
+            cleaned_docs.append(d.get("text", ""))  
+        else:
+            cleaned_docs.append(str(d))
+
+    return cleaned_docs

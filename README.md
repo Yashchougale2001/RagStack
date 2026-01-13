@@ -42,6 +42,9 @@ Clean, modular, interview-ready codebase
 
 Interactive CLI-based Q&A loop
 
+User Query → Retriever → Generator → Privacy Agent → Final Answer + Privacy Report
+
+
 🗂 Project Structure
 mini_rag/
 │

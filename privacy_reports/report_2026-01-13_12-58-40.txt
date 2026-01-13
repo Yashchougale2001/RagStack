@@ -1,0 +1,45 @@
+
+================ PRIVACY REPORT ================
+
+Timestamp      : 2026-01-13_12-58-40
+
+User Query     :
+what is location of Sarah Johnson
+
+Privacy Score  : 25.00
+
+PII Detected   : {'name': ['Sarah JohnsonRow', 'Sarah Johnson', 'Financial Analyst', 'Linda Taylor', 'Sales Manager']}
+
+# Retrieved Context Chunks:
+# ------------------------------------------------
+# [Chunk 1]
+Row 6:
+- EmployeeID: E006
+- Name: [****]
+- Department: Finance
+- Role: [****]
+- JoiningDate: 2021-07-23
+- Salary: 70000
+- PerformanceScore: 7
+- Location: Seattle
+
+[Chunk 2]
+Row 8:
+- EmployeeID: E008
+- Name: [****]
+- Department: Sales
+- Role: [****]
+- JoiningDate: 2019-06-18
+- Salary: 88000
+- PerformanceScore: 8
+- Location: Chicago
+
+
+
+Generated Answer:
+------------------------------------------------
+Sure, here's the answer to the question based on the provided context:
+
+Location of [*****]: Seaotle.
+
+=================================================

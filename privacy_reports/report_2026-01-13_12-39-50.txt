@@ -1,0 +1,47 @@
+
+================ PRIVACY REPORT ================
+
+Timestamp      : 2026-01-13_12-39-50
+
+User Query     :
+what is role of john doe
+
+Privacy Score  : 90.00
+
+PII Detected   : {'name': ['john doeRow', 'John Doe', 'Software Engineer', 'New York', 'Robert Brown', 'Sales Executive']}
+
+Retrieved Context Chunks:
+------------------------------------------------
+[Chunk 1]
+Row 1:
+- EmployeeID: E001
+- Name: [REDACTED]
+- Department: Engineering
+- Role: [REDACTED]
+- JoiningDate: 2021-05-10
+- Salary: 75000
+- PerformanceScore: 8
+- Location: [REDACTED]
+
+[Chunk 2]
+Row 3:
+- EmployeeID: E003
+- Name: [REDACTED]
+- Department: Sales
+- Role: [REDACTED]
+- JoiningDate: 2020-03-20
+- Salary: 60000
+- PerformanceScore: 6
+- Location: Chicago
+
+
+
+Generated Answer:
+------------------------------------------------
+Sure, here's an example answer for the question "What is the role of [REDACTED] in the context provided?"
+
+Based on the provided context, [REDACTED] is a software engineer in the Engineering department. He joined the company as a [REDACTED] with a salary of 75000 and a performance score of 8. [REDACTED], on the other hand, is a sales executive in the Sales department. He started his job as a [REDACTED] with a salary of 60000 and a performance score of 6.
+
+Based on these facts, [REDACTED]'s role in the context provided is that he is a [REDACTED] in Engineering, while [REDACTED]'s role is that he is a [REDACTED] in Sales.
+
+=================================================
