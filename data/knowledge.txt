@@ -14,7 +14,7 @@ LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit) are types of RNNs t
 
 Transformers revolutionized DL by using attention mechanisms to capture relationships across sequences. They power modern Large Language Models (LLMs) capable of text generation, summarization, translation, and code generation.
 
-Large Language Models (LLMs) are trained on massive text datasets to understand and generate human-like language. Tokenization splits text into chunks, embeddings represent semantics, and context windows define the amount of text the model can consider at once. Fine-tuning adapts models to specific tasks.
+Large Language Models (LLM) are trained on massive text datasets to understand and generate human-like language. Tokenization splits text into chunks, embeddings represent semantics, and context windows define the amount of text the model can consider at once. Fine-tuning adapts models to specific tasks.
 
 Generative AI (GenAI) refers to models that create new content, including text, images, audio, and video. Techniques include GANs (Generative Adversarial Networks), diffusion models, and transformer-based LLMs.
 

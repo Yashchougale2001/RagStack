@@ -1,0 +1,6 @@
+patient_id,first_name,last_name,age,gender,phone,email,address,diagnosis,medications,last_visit,next_followup,doctor,total_bill,insurance_provider,policy_number,transaction_id
+P1001,Aarav,Sharma,34,M,9876543210,aarav.sharma@example.com,"Pune, MH","Type 2 Diabetes","Metformin 500mg","2025-01-12","2025-03-12","Dr. Mehta",12450,"HDFC Health","HDFC-PL-723481","TXN89AH12D3F"
+P1002,Reema,Kulkarni,48,F,9822377123,reema.k@example.com,"Kolhapur, MH","Hypertension","Amlodipine 10mg","2025-01-10","2025-02-10","Dr. R. Patil",8400,"ICICI Lombard","ICICI-PL-567823","TXN12BD83KKQ"
+P1003,Sachin,Desai,29,M,9090901234,sachin.d@example.com,"Mumbai, MH","Asthma","Salbutamol Inhaler","2025-01-15","2025-02-15","Dr. Joshi",6300,"Star Health","STAR-PL-998234","TXN76AD99HH2"
+P1004,Neha,Patil,55,F,7765432190,neha.p@example.com,"Satara, MH","Arthritis","Ibuprofen 400mg","2025-01-08","2025-04-08","Dr. Kulkarni",15900,"Reliance Health","REL-PL-112567","TXN09LA2KQPQ"
+P1005,Vikram,Jadhav,41,M,9012345678,vikram.j@example.com,"Sangli, MH","Migraine","Sumatriptan 50mg","2025-01-18","2025-03-18","Dr. A. Rane",7200,"Aditya Birla","AB-PL-889123","TXN11QQZ4PX8"

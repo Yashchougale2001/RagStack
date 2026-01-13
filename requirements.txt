@@ -1,6 +1,39 @@
-sentence-transformers
-chromadb
-transformers
-torch
 scikit-learn
-pyyaml
+ollama
+pandas==2.2.0
+# Core
+PyYAML>=6.0
+numpy>=1.25,<1.27
+
+# Presidio
+presidio-analyzer>=1.9,<2
+presidio-anonymizer>=1.9,<2
+
+# spaCy
+spacy>=3.6,<3.7
+
+# Transformers / embeddings
+transformers>=4.42,<5
+sentence-transformers>=2.2,<3
+
+# Vector DB
+chromadb>=0.6,<0.7
+
+# Utilities
+tqdm>=4.66
+typing-extensions>=4.7
+
+
+# # Utilities
+# tqdm==4.66.1
+# typing-extensions==4.7.1
+
+
+# For hashing & UUIDs
+# pip install python-dotenv
+
+# For strict schema validation
+# pip install pydantic
+
+# For security logging
+# pip install loguru

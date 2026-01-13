@@ -1,6 +1,6 @@
 RAG_Stack: CPU-Friendly Local Retrieval-Augmented Generation System
 
-A lightweight, modular Retrieval-Augmented Generation (RAG) system designed for CPU-only, low-resource machines, using fully local models with zero paid APIs.
+A lightweight, modular Retrieval-Augmented Generation (RAG) system designed for CPU-only, low-resource machines, using fully local models.
 
 This project demonstrates how to build a production-style RAG pipeline that runs entirely on your machine using:
 
