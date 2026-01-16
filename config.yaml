@@ -1,6 +1,6 @@
 embedding_model: BAAI/bge-small-en-v1.5
 llm_model: tinyllama
-
+data_path: "data/it_assets/"
 chunk_size: 120
 overlap: 30
 

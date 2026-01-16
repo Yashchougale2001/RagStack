@@ -31,7 +31,7 @@ def run_ingestion():
     with open("config.yaml", "r") as f:
         config = yaml.safe_load(f)
 
-    base_path = config.get("data_path", "data")     # folder to scan
+    base_path = config.get("data/it_assets", "data")     # folder to scan
     chunk_size = config.get("chunk_size", 400)
     overlap = config.get("overlap", 80)
 
