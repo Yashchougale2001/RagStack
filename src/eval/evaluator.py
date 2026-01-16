@@ -1,19 +1,11 @@
-def evaluate_answer(answer, context):
-    if "I don't know" in answer:
-        return "NO_ANSWER"
-
-    if not context:
-        return "UNFAITHFUL"
-
-    overlap = sum(
-        1 for c in context
-        if any(word.lower() in c.lower() for word in answer.split())
-    )
-
-    if overlap == 0:
-        return "UNFAITHFUL"
-
-    if len(answer.split()) < 5:
-        return "LOW_CONFIDENCE"
-
-    return "OK"
+# src/eval/evaluator.py
+def is_answer_grounded(answer, context_chunks):
+    """
+    Simple metric: checks if words in answer appear in context chunks.
+    Returns True if grounded, False otherwise.
+    """
+    context_text = " ".join(context_chunks).lower()
+    words = [w for w in answer.lower().split() if len(w) > 3]
+    matched = sum(1 for w in words if w in context_text)
+    score = matched / (len(words) or 1)  # fraction of words grounded
+    return score  # 0-1

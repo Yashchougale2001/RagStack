@@ -62,8 +62,7 @@ mini_rag/
 │   │   └── retriever.py           # retrieve_chunks() with min_docs & optional similarity filtering
 │   │
 │   ├── generation/
-│   │   ├── generator.py           # generate_answer(), trim_context(), model init
-│   │   └── prompt_templates.py    # optional, store complex prompts separately
+│   │   └── generator.py           # generate_answer(), trim_context(), model init
 │   │
 │   ├── eval/
 │   │   └── evaluator.py           # evaluate_answer() with grounding check
